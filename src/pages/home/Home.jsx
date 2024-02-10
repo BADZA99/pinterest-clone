@@ -1,11 +1,13 @@
 import React from 'react'
 import { StyledHome } from './Home.styled'
+import Footer from '../../components/footer/Footer'
 
 const Home = () => {
    
   return (
     <StyledHome>
-      Home
+      <div>content</div>
+    <Footer/>
     </StyledHome>
   )
 }

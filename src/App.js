@@ -7,7 +7,7 @@ import { THEME } from './utils/themes';
 import { useState } from 'react';
 
 function App() {
-  const [currentTheme, setCurrentTheme] = useState("Dark");
+  const [currentTheme, setCurrentTheme] = useState("Light");
   return (
     <>
     <ThemeProvider theme={THEME[currentTheme]}>
