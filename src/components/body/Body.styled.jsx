@@ -8,6 +8,39 @@ height: 100vh;
 /* background: #fff; */
 /* position: relative; */
 `;
+export const DotsContainer = styled.div`
+ /* background: #000; */
+ margin-top:2.2rem;
+ display: flex;
+ gap:.8rem;
+`;
+export const Dot = styled.div.attrs(({bgColor})=>({
+        bgColor:bgColor || "#e1e1e1"
+    
+}))`
+    width: .6rem;
+    height: .6rem;
+    border-radius:100rem;
+    background-color:${({bgColor})=>bgColor};
+
+    &:hover{
+        cursor: pointer;
+    
+    }
+
+`;
+export const HeadingContainer = styled.div`
+display:flex;
+flex-direction: column;
+position: absolute;
+left:50%;
+top:25%;
+transform: translateX(-50%);
+gap:1rem;
+justify-content: center;
+text-align: center;
+align-items: center;
+`;
 
 const Bounce = keyframes`
 0%{
