@@ -4,6 +4,7 @@ import { HiLightBulb} from "react-icons/hi";
 import { TbBulbOff } from "react-icons/tb";
 import { Text } from '../../utils/text.styled';
 import { HEADINGS } from '../../utils/text';
+import Tiles from '../tiles/Tiles';
 
 
 
@@ -17,16 +18,16 @@ const Body = ({ ToggleTheme, currentTheme }) => {
           {HEADINGS[currentHeadingIndex].name}
         </Text>
         <DotsContainer>
-
-            {HEADINGS.map(({index, color}) => (
-                <Dot
-                key={index}
-                bgColor={currentHeadingIndex == index ? color : "#e1e1e1"}
-                onClick={() => setCurrentHeadingIndex(index)}
-              ></Dot>
-            ))}
+          {HEADINGS.map(({ index, color }) => (
+            <Dot
+              key={index}
+              bgColor={currentHeadingIndex === index ? color : "#e1e1e1"}
+              onClick={() => setCurrentHeadingIndex(index)}
+            ></Dot>
+          ))}
         </DotsContainer>
       </HeadingContainer>
+      <Tiles currentHeadingIndex={currentHeadingIndex} />
       <StyledAnimatedIcon
         size={50}
         bgColor="white"

@@ -5,6 +5,7 @@ import {keyframes} from "styled-components";
 export const StyledBody = styled.div`
 width: 100vw;
 height: 100vh;
+overflow: hidden;
 /* background: #fff; */
 /* position: relative; */
 `;
@@ -34,7 +35,7 @@ display:flex;
 flex-direction: column;
 position: absolute;
 left:50%;
-top:25%;
+top:21%;
 transform: translateX(-50%);
 gap:1rem;
 justify-content: center;
