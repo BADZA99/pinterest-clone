@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import { AnimatedHeading, Dot, DotsContainer, HeadingContainer, StyledAnimatedIcon, StyledBody } from './Body.styled'
 import { HiLightBulb } from "react-icons/hi";
 import { TbBulbOff } from "react-icons/tb";
@@ -8,8 +8,8 @@ import Tiles from '../tiles/Tiles';
 import { AnimatePresence } from 'framer-motion';
 
 
-
-const Body = ({ ToggleTheme, currentTheme }) => {
+// Le Hook React.memo est une fonction d'optimisation de performance qui aide à éviter les rendus inutiles dans les composants fonctionnels de React. Il fait cela en mémorisant le rendu du composant et en évitant un nouveau rendu si les props sont les mêmes que lors du dernier rendu
+const Body = memo(({ ToggleTheme, currentTheme }) => {
   const [currentHeadingIndex, setCurrentHeadingIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -64,6 +64,6 @@ const Body = ({ ToggleTheme, currentTheme }) => {
       />
     </StyledBody>
   );
-};
+})
 
 export default Body
