@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Dot, DotsContainer, HeadingContainer, StyledAnimatedIcon, StyledBody } from './Body.styled'
-import { HiLightBulb} from "react-icons/hi";
+import { HiLightBulb } from "react-icons/hi";
 import { TbBulbOff } from "react-icons/tb";
 import { Text } from '../../utils/text.styled';
 import { HEADINGS } from '../../utils/text';
@@ -9,7 +9,14 @@ import Tiles from '../tiles/Tiles';
 
 
 const Body = ({ ToggleTheme, currentTheme }) => {
-    const [currentHeadingIndex,setCurrentHeadingIndex]=useState(0);
+  const [currentHeadingIndex, setCurrentHeadingIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHeadingIndex((currentHeadingIndex + 1) % 4);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [currentHeadingIndex]);
+
   return (
     <StyledBody>
       <HeadingContainer>
