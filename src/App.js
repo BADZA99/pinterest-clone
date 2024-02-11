@@ -8,12 +8,16 @@ import { useState } from 'react';
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState("Light");
+  const ToggleTheme= ()=>{
+    setCurrentTheme(currentTheme === "Light" ? "Dark" : "Light");
+  
+  }
   return (
     <>
     <ThemeProvider theme={THEME[currentTheme]}>
     <GlobalStyles/>
       <Reset/>
-    <Home/>
+    <Home ToggleTheme={ToggleTheme}  currentTheme={currentTheme} />
     </ThemeProvider>
     </>
   );

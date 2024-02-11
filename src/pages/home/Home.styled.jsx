@@ -5,6 +5,7 @@ export const StyledHome = styled.div`
   display:grid;
   grid-template-columns: 1fr;
   grid-template-rows: 94% 6%;
+  position:relative;
 `;
  // const homep=styled.p({
     //     color:"white"
