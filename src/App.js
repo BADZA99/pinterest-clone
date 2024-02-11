@@ -9,10 +9,9 @@ import { useCallback, useState } from 'react';
 // useCallback est un hook dans React qui retourne une version mémorisée d'une fonction callback qui ne change pas à moins que les dépendances ne changent. C'est utile lorsque vous passez des callbacks à des composants optimisés qui se basent sur l'égalité de référence pour éviter des rendus inutiles.
 function App() {
   const [currentTheme, setCurrentTheme] = useState("Light");
-  const ToggleTheme= useCallback(()=>{
+  const ToggleTheme = useCallback(() => {
     setCurrentTheme(currentTheme === "Light" ? "Dark" : "Light");
-  
-  },[]);
+  }, [currentTheme]);
   return (
     <>
     <ThemeProvider theme={THEME[currentTheme]}>
