@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
 
 export const TilesContainer = styled.div`
 height: 100%;
@@ -15,6 +17,10 @@ export const TileColumn = styled.div`
   width: 100%;
   /* background-color: blue; */
   transform: translateY(${({margin}) => margin || "0rem"});
+  position: absolute;
+`;
+export const AnimatedColumn = styled(motion.div)`
+position: relative;
 `;
 export const Tile = styled.img`
   height: 23rem;

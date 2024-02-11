@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { IoIosCloudyNight } from "react-icons/io";
 import {keyframes} from "styled-components";
+import {motion} from "framer-motion";
 
 export const StyledBody = styled.div`
 width: 100vw;
@@ -11,10 +12,15 @@ overflow: hidden;
 `;
 export const DotsContainer = styled.div`
  /* background: #000; */
- margin-top:2.2rem;
+ margin-top:4.2rem;
  display: flex;
  gap:.8rem;
 `;
+export const AnimatedHeading = styled(motion.div)`
+ position:absolute;
+ top:44%;
+`;
+
 export const Dot = styled.div.attrs(({bgColor})=>({
         bgColor:bgColor || "#e1e1e1"
     
