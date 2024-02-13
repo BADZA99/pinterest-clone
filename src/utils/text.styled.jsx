@@ -26,6 +26,17 @@ export const Text = styled.p`
     css`
       color: ${(props) => props.theme.SignTextColor};
     `}
+
+     @media (max-width: 828px) {
+    font-size: ${SIZES["medieum"]};
+  }
+     @media (max-width: 606px) {
+    font-size: ${SIZES["normal"]};
+  }
+     @media (max-width: 412px) {
+    font-size: ${SIZES["small"]};
+  }
+  
 `;
 
 

@@ -8,7 +8,7 @@ const Header = () => {
     return (
       <StyledHeader>
         <LogoContainer>
-          <FaPinterest size={37} color="#E60022" />
+          <FaPinterest size={33} color="#E60022" />
           <Text
             ColorType="pinterestColor"
             size="large"

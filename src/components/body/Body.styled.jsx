@@ -11,14 +11,20 @@ overflow: hidden;
 /* position: relative; */
 `;
 export const DotsContainer = styled.div`
- /* background: #000; */
- margin-top:4.2rem;
- display: flex;
- gap:.8rem;
+  /* background: #000; */
+  margin-top: 4.2rem;
+  display: flex;
+  gap: 0.8rem;
+
+  @media (max-width: 600px) {
+    margin-top: 3rem;
+  }
 `;
 export const AnimatedHeading = styled(motion.div)`
- position:absolute;
- top:44%;
+  position: absolute;
+  top: 44%;
+
+ 
 `;
 
 export const Dot = styled.div.attrs(({bgColor})=>({
@@ -37,16 +43,19 @@ export const Dot = styled.div.attrs(({bgColor})=>({
 
 `;
 export const HeadingContainer = styled.div`
-display:flex;
-flex-direction: column;
-position: absolute;
-left:50%;
-top:21%;
-transform: translateX(-50%);
-gap:1rem;
-justify-content: center;
-text-align: center;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 21%;
+  transform: translateX(-50%);
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  @media (max-width: 600px) {
+    gap: 0.6rem;
+  }
 `;
 
 const Bounce = keyframes`
